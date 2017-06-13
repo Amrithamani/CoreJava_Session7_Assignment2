@@ -24,35 +24,13 @@ public class Assignment2 {
 
 		s.close();// closing Scanner object
 
-		// initializing integer variable
+		// initialize integer variable using inbuilt function
 
-		int j = 0;
+		int match = name.indexOf(subName);
 
-		// initializing String temporary variable
-		String temp = "";
+		// checks match value greater than zero
 
-		// loop to check name substring
-		for (int i = 0; i < name.length(); i++) {
-
-			// checks value less than given length
-
-			if (j < subName.length()) {
-
-				// checks both substring at given index
-
-				if ((name.substring(i, i + 1)).equals(subName.substring(j, j + 1))) {
-
-					temp += name.substring(i, i + 1);// storing value
-
-					j++;// increasing subName index value
-
-				}
-			}
-		}
-
-		// checks temporary String is equal to user entered input
-
-		if (temp.equals(subName)) {
+		if (match > 0) {
 
 			System.out.println("substring found");
 			// prints substring found
